@@ -14,6 +14,23 @@ use DoubleBreak\Spapi\Client;
 
 class ProductFees extends Client {
 
+  
+  
+  
+  /**
+  * Operation getMyFeesEstimates
+  *
+  * @param 
+  *
+  */
+  public function getMyFeesEstimates( $body = [])
+  {
+    return $this->send("/products/fees/v0/feesEstimate", [
+      'method' => 'POST',
+      'json' => $body
+    ]);
+  }
+    
   /**
   * Operation getMyFeesEstimateForSKU
   *
