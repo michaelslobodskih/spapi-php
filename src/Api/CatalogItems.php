@@ -33,7 +33,7 @@ class CatalogItems extends Client {
   */
   public function searchCatalogItems($queryParams = [])
   {
-    return $this->send("/catalog/2020-12-01/items", [
+    return $this->send("/catalog/2022-04-01/items", [
       'method' => 'GET',
       'query' => $queryParams,
     ]);
@@ -41,7 +41,7 @@ class CatalogItems extends Client {
 
   public function searchCatalogItemsAsync($queryParams = [])
   {
-    return $this->sendAsync("/catalog/2020-12-01/items", [
+    return $this->sendAsync("/catalog/2022-04-01/items", [
       'method' => 'GET',
       'query' => $queryParams,
     ]);
