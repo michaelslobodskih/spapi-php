@@ -303,7 +303,7 @@ class Credentials
     {
         $knownToken = $this->tokenStorage->getToken($key);
         if (!empty($knownToken)) {
-            $expiresOn = $knownToken['expiresOn']-300;
+            $expiresOn = ($knownToken['expiresOn'] - 300);
             if ($expiresOn > time()) {
                 return $knownToken['token'];
             }
